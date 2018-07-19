@@ -23,12 +23,12 @@
         </plugins>
     </build>
     <dependencies>
-
         <dependency>
             <groupId>org.mybatis.generator</groupId>
             <artifactId>mybatis-generator-core</artifactId>
             <version>1.3.6</version>
         </dependency>
+        </dependencies>
 
 ```
 ---
