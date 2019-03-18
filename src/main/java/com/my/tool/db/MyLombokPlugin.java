@@ -20,10 +20,10 @@ public class MyLombokPlugin extends PluginAdapter {
     @Override
     public boolean modelBaseRecordClassGenerated(TopLevelClass topLevelClass,
                                                  IntrospectedTable introspectedTable) {
-        //该代码表示在生成class的时候，向topLevelClass添加一个@Setter和@Getter注解
-//        topLevelClass.addAnnotation("@Getter@Setter");
         topLevelClass.addAnnotation("@Data");
+        topLevelClass.addAnnotation("@Builder");
         topLevelClass.addImportedType("lombok.Data");
+        topLevelClass.addImportedType("lombok.Builder");
         return super.modelBaseRecordClassGenerated(topLevelClass,
                 introspectedTable);
     }
